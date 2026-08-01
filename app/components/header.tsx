@@ -21,9 +21,9 @@ export default function Header() {
 
   const navLinks = [
     { label: "Lineup", href: "/lineup" },
-    { label: "Schedule", href: "/schedule" },
     { label: "Tickets", href: "/tickets" },
-    { label: "Info", href: "/info" },
+    { label: "Our Partners", href: "/partners" },
+    { label: "About Us", href: "/about" },
   ];
 
   return (
