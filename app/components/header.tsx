@@ -39,8 +39,8 @@ export default function Header() {
           scrolled ? "py-2" : "py-4"
         }`}
       >
-        <div className="flex items-center gap-2 text-white md:gap-4">
-          Atlantica Music Festival
+        <div className="font-display flex items-center gap-2 text-white md:gap-4">
+          Poinciana Music Festival
         </div>
 
         {/* Desktop nav */}
