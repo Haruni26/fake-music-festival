@@ -14,7 +14,7 @@ export default function Home() {
 
         {/* Night gradient + glow */}
         <div className="absolute inset-0 bg-linear-to-b from-black/50 via-navy-deep/60 to-navy-deep" />
-        <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-neon-red/20 blur-3xl" />
+        <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-orange/30 blur-3xl" />
         <div className="absolute -bottom-40 -right-40 h-96 w-96 rounded-full bg-neon-blue/20 blur-3xl" />
 
         {/* Grain texture */}
@@ -45,6 +45,40 @@ export default function Home() {
         <div className="absolute bottom-6 z-10 flex flex-col items-center gap-2">
           <span className="h-8 w-px bg-linear-to-b from-transparent via-ivory/40 to-transparent" />
           <span className="h-1.5 w-1.5 rounded-full bg-white motion-safe:animate-pulse" />
+        </div>
+      </section>
+
+      {/* Lineup Section */}
+      <section>
+        <div>
+          <h1 className="font-display text-center text-white">
+            Official Lineup
+          </h1>
+        </div>
+      </section>
+
+      {/* Date and ticket section */}
+      <section>
+        <div>
+          <h1 className="font-display text-center text-white">
+            Date and Tickets
+          </h1>
+        </div>
+      </section>
+
+      {/* Partners Section */}
+      <section>
+        <div>
+          <h1 className="font-display text-center text-white">Our Partners</h1>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section>
+        <div>
+          <h1 className="font-display text-center text-white">
+            First of its kind
+          </h1>
         </div>
       </section>
     </div>

@@ -30,8 +30,8 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b ${
         scrolled
-          ? "bg-black/50 backdrop-blur-md border-white/60 shadow-lg"
-          : "bg-black/10 backdrop-blur-sm border-white/40"
+          ? "bg-black border-white/60 shadow-lg"
+          : "bg-black/60 backdrop-blur-sm"
       }`}
     >
       <div
@@ -41,10 +41,10 @@ export default function Header() {
       >
         <div className="font-display flex flex-col leading-tight text-white">
           <span className="text-xl md:text-2xl tracking-wide">
-            Poinciana Music Festival
+            Cabana Music Festival
           </span>
           <span className="text-center text-xs md:text-sm text-white/60 font-normal tracking-wide">
-            In collaboration with Hotel Cabana
+            In collaboration with Poinciana light
           </span>
         </div>
 
