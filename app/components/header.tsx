@@ -39,8 +39,13 @@ export default function Header() {
           scrolled ? "py-2" : "py-4"
         }`}
       >
-        <div className="font-display flex items-center gap-2 text-white md:gap-4">
-          Poinciana Music Festival
+        <div className="font-display flex flex-col leading-tight text-white">
+          <span className="text-xl md:text-2xl tracking-wide">
+            Poinciana Music Festival
+          </span>
+          <span className="text-center text-xs md:text-sm text-white/60 font-normal tracking-wide">
+            In collaboration with Hotel Cabana
+          </span>
         </div>
 
         {/* Desktop nav */}
@@ -49,7 +54,7 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm uppercase tracking-wide text-white/80 transition-colors hover:text-white"
+              className="font-display text-sm uppercase tracking-wide text-white/80 transition-colors hover:text-white"
             >
               {link.label}
             </a>
@@ -93,7 +98,7 @@ export default function Header() {
             key={link.href}
             href={link.href}
             onClick={() => setMenuOpen(false)}
-            className="text-lg uppercase tracking-wide text-white/90 transition-colors hover:text-white"
+            className="font-display text-2xl uppercase tracking-wide text-white/90 transition-colors hover:text-white"
           >
             {link.label}
           </a>
