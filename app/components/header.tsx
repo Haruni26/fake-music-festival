@@ -29,9 +29,7 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b ${
-        scrolled
-          ? "bg-black border-white/60 shadow-lg"
-          : "bg-black/60 backdrop-blur-sm"
+        scrolled ? "bg-black shadow-lg" : "bg-black/60 backdrop-blur-sm"
       }`}
     >
       <div
