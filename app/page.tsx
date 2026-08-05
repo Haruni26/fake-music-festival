@@ -1,4 +1,82 @@
 import Image from "next/image";
+import { LineupDay } from "./components/lineup";
+
+const lineup = [
+  {
+    day: "Friday",
+    tiers: [
+      {
+        size: "xl" as const,
+        artists: [
+          "Major Lazer",
+          "DJ Snake",
+          "The Chainsmokers",
+          "Disclosure",
+          "Flume",
+        ],
+      },
+      {
+        size: "md" as const,
+        artists: [
+          "Tyla",
+          "Shenseea",
+          "Naughty Boy",
+          "Gorillaz",
+          "Yoasobi",
+          "Max McNown",
+        ],
+      },
+      {
+        size: "sm" as const,
+        artists: [
+          "Bob Moses",
+          "Wolf Alice",
+          "VTSS",
+          "Amber Mark",
+          "Billie Marten",
+          "MPH",
+        ],
+      },
+    ],
+  },
+  {
+    day: "Saturday",
+    tiers: [
+      {
+        size: "xl" as const,
+        artists: [
+          "Bad Bunny",
+          "Kendrick Lamar",
+          "J Cole",
+          "Empire of the Sun",
+          "The Weeknd",
+        ],
+      },
+      {
+        size: "md" as const,
+        artists: [
+          "Vybez Kartel",
+          "Glass Animals",
+          "Luke Hemmings",
+          "bruh idk",
+          "The 1975",
+        ],
+      },
+    ],
+  },
+];
+
+export function LineupSection() {
+  return (
+    <section className="font-display relative px-6 py-24">
+      <div className="mx-auto flex max-w-8xl flex-col gap-16">
+        {lineup.map((d) => (
+          <LineupDay key={d.day} day={d.day} tiers={d.tiers} />
+        ))}
+      </div>
+    </section>
+  );
+}
 
 export default function Home() {
   return (
@@ -16,15 +94,6 @@ export default function Home() {
         <div className="absolute inset-0 bg-linear-to-b from-black/50 via-navy-deep/60 to-navy-deep" />
         <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-orange/30 blur-3xl" />
         <div className="absolute -bottom-40 -right-40 h-96 w-96 rounded-full bg-neon-blue/20 blur-3xl" />
-
-        {/* Grain texture */}
-        <div
-          className="absolute inset-0 opacity-[0.04] mix-blend-overlay"
-          style={{
-            backgroundImage:
-              "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23n)'/%3E%3C/svg%3E\")",
-          }}
-        />
 
         <div className="z-10 text-center flex flex-col items-center gap-6">
           <h1 className="font-display text-5xl sm:text-7xl md:text-8xl tracking-wide text-ivory drop-shadow-[0_0_25px_rgba(270,204,179,0.5)]">
@@ -49,16 +118,14 @@ export default function Home() {
       </section>
 
       {/* Lineup Section */}
-      <section>
+      <section className="relative border-t-5 border-t-black bg-linear-to-b from-orange/70 via-neon-blue/30 to-navy-deep px-5 py-5">
         <div>
-          <h1 className="font-display text-center text-white">
-            Official Lineup
-          </h1>
+          <LineupSection />
         </div>
       </section>
 
       {/* Date and ticket section */}
-      <section>
+      <section className="relative bg-navy-deep px-5 py-5">
         <div>
           <h1 className="font-display text-center text-white">
             Date and Tickets
@@ -67,17 +134,17 @@ export default function Home() {
       </section>
 
       {/* Partners Section */}
-      <section>
+      <section className="relative bg-linear-to-b from-navy-deep via-neon-blue/40 to-orange/80 px-6 py-24">
         <div>
           <h1 className="font-display text-center text-white">Our Partners</h1>
         </div>
       </section>
 
       {/* About Section */}
-      <section>
+      <section className="relative bg-orange/80 px-6 py-24">
         <div>
           <h1 className="font-display text-center text-white">
-            First of its kind
+            Years of Experience
           </h1>
         </div>
       </section>
