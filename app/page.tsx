@@ -1,82 +1,6 @@
 import Image from "next/image";
-import { LineupDay } from "./components/lineup";
-
-const lineup = [
-  {
-    day: "Friday",
-    tiers: [
-      {
-        size: "xl" as const,
-        artists: [
-          "Major Lazer",
-          "DJ Snake",
-          "The Chainsmokers",
-          "Disclosure",
-          "Flume",
-        ],
-      },
-      {
-        size: "md" as const,
-        artists: [
-          "Tyla",
-          "Shenseea",
-          "Naughty Boy",
-          "Gorillaz",
-          "Yoasobi",
-          "Max McNown",
-        ],
-      },
-      {
-        size: "sm" as const,
-        artists: [
-          "Bob Moses",
-          "Wolf Alice",
-          "VTSS",
-          "Amber Mark",
-          "Billie Marten",
-          "MPH",
-        ],
-      },
-    ],
-  },
-  {
-    day: "Saturday",
-    tiers: [
-      {
-        size: "xl" as const,
-        artists: [
-          "Bad Bunny",
-          "Kendrick Lamar",
-          "J Cole",
-          "Empire of the Sun",
-          "The Weeknd",
-        ],
-      },
-      {
-        size: "md" as const,
-        artists: [
-          "Vybez Kartel",
-          "Glass Animals",
-          "Luke Hemmings",
-          "bruh idk",
-          "The 1975",
-        ],
-      },
-    ],
-  },
-];
-
-export function LineupSection() {
-  return (
-    <section className="font-display relative px-6 py-24">
-      <div className="mx-auto flex max-w-8xl flex-col gap-16">
-        {lineup.map((d) => (
-          <LineupDay key={d.day} day={d.day} tiers={d.tiers} />
-        ))}
-      </div>
-    </section>
-  );
-}
+import { LineupSection } from "./components/lineup";
+import { DateAndTickets } from "./components/dateandtickets";
 
 export default function Home() {
   return (
@@ -125,11 +49,9 @@ export default function Home() {
       </section>
 
       {/* Date and ticket section */}
-      <section className="relative bg-navy-deep px-5 py-5">
+      <section className="">
         <div>
-          <h1 className="font-display text-center text-white">
-            Date and Tickets
-          </h1>
+          <DateAndTickets />
         </div>
       </section>
 

@@ -3,7 +3,7 @@ type Tier = {
   artists: string[];
 };
 
-type LineupDay = {
+type LineupDayData = {
   day: string;
   tiers: Tier[];
 };
@@ -34,7 +34,7 @@ function LineupRow({ tier }: { tier: Tier }) {
   );
 }
 
-export function LineupDay({ day, tiers }: LineupDay) {
+function LineupDay({ day, tiers }: LineupDayData) {
   return (
     <div className="flex flex-col items-center gap-3 text-center">
       <span className="font-display text-sm tracking-[0.3em] text-ivory">
@@ -44,5 +44,85 @@ export function LineupDay({ day, tiers }: LineupDay) {
         <LineupRow key={i} tier={tier} />
       ))}
     </div>
+  );
+}
+
+const lineup: LineupDayData[] = [
+  {
+    day: "Friday",
+    tiers: [
+      {
+        size: "xl",
+        artists: [
+          "Major Lazer",
+          "DJ Snake",
+          "The Chainsmokers",
+          "Disclosure",
+          "Porter Robinson",
+        ],
+      },
+      {
+        size: "md",
+        artists: [
+          "Glass Animals",
+          "Flume",
+          "Naughty Boy",
+          "Gorillaz",
+          "ShaqisSong",
+        ],
+      },
+      {
+        size: "sm",
+        artists: [
+          "Foster the People",
+          "Wolf Alice",
+          "Amber Mark",
+          "another person",
+          "Billie Marten",
+          "MPH",
+        ],
+      },
+    ],
+  },
+  {
+    day: "Saturday",
+    tiers: [
+      {
+        size: "xl",
+        artists: [
+          "Bad Bunny",
+          "Kendrick Lamar",
+          "J Cole",
+          "Metro Boomin",
+          "Rauw Alejandro",
+        ],
+      },
+      {
+        size: "md",
+        artists: ["Vybez Kartel", "Tyla", "Shenseea", "Rvssian", "The 1975"],
+      },
+      {
+        size: "sm",
+        artists: [
+          "Bob Moses",
+          "Wolf Alice",
+          "Amber Mark",
+          "Billie Marten",
+          "MPH",
+        ],
+      },
+    ],
+  },
+];
+
+export function LineupSection() {
+  return (
+    <section className="font-display relative px-6 py-24">
+      <div className="mx-auto flex max-w-5xl flex-col gap-16">
+        {lineup.map((d) => (
+          <LineupDay key={d.day} day={d.day} tiers={d.tiers} />
+        ))}
+      </div>
+    </section>
   );
 }
