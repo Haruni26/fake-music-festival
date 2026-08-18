@@ -45,7 +45,7 @@ export function DateAndTickets() {
           ))}
         </div>
 
-        <button className="mt-4 rounded bg-ivory px-10 py-3 font-semibold text-navy-deep transition-all hover:shadow-[0_0_25px_rgba(70,230,255,0.6)]">
+        <button className="mt-4 text-xl rounded bg-ivory px-10 py-3 font-semibold text-navy-deep transition-all hover:shadow-[0_0_25px_rgba(70,230,255,0.6)]">
           Get Tickets
         </button>
       </div>

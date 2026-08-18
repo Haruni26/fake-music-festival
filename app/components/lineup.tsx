@@ -21,13 +21,9 @@ function LineupRow({ tier }: { tier: Tier }) {
       className={`flex flex-wrap items-center justify-center gap-x-3 gap-y-1 uppercase tracking-wide text-ivory ${sizeClasses[tier.size]}`}
     >
       {tier.artists.map((artist, i) => (
-        <span key={artist} className="flex items-center gap-x-3">
+        <span key={artist} className="flex gap-2 md:gap-x-3">
           {artist}
-          {i < tier.artists.length - 1 && (
-            <span className="text-neon-cyan/70" aria-hidden="true">
-              ·
-            </span>
-          )}
+          {i < tier.artists.length - 1 && <span aria-hidden="true">.</span>}
         </span>
       ))}
     </div>
@@ -37,7 +33,7 @@ function LineupRow({ tier }: { tier: Tier }) {
 function LineupDay({ day, tiers }: LineupDayData) {
   return (
     <div className="flex flex-col items-center gap-3 text-center">
-      <span className="font-display text-sm tracking-[0.3em] text-ivory">
+      <span className="font-display text-lg tracking-[0.3em] mb-5 text-ivory">
         {day}
       </span>
       {tiers.map((tier, i) => (
@@ -68,7 +64,7 @@ const lineup: LineupDayData[] = [
           "Flume",
           "Naughty Boy",
           "Gorillaz",
-          "ShaqisSong",
+          "F3miii",
         ],
       },
       {
@@ -99,13 +95,20 @@ const lineup: LineupDayData[] = [
       },
       {
         size: "md",
-        artists: ["Vybez Kartel", "Tyla", "Shenseea", "Rvssian", "The 1975"],
+        artists: [
+          "Vybez Kartel",
+          "Tyla",
+          "Shenseea",
+          "Rvssian",
+          "Popcaan",
+          "Wizkid",
+        ],
       },
       {
         size: "sm",
         artists: [
-          "Bob Moses",
-          "Wolf Alice",
+          "Bunji Garlin",
+          "Destra",
           "Amber Mark",
           "Billie Marten",
           "MPH",

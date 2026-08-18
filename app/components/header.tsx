@@ -38,16 +38,16 @@ export default function Header() {
         }`}
       >
         <div className="font-display flex flex-col leading-tight text-white">
-          <span className="text-xl md:text-2xl tracking-wide">
+          <span className="text-md md:text-2xl tracking-wide">
             Cabana Music Festival
           </span>
-          <span className="text-center text-xs md:text-sm text-white/60 font-normal tracking-wide">
+          <span className="text-xs md:text-sm text-white/60 font-normal tracking-wide">
             In collaboration with Poinciana light
           </span>
         </div>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-8 lg:flex">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -63,7 +63,7 @@ export default function Header() {
           aria-label="Toggle navigation menu"
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((prev) => !prev)}
-          className="relative z-50 flex h-8 w-8 flex-col items-center justify-center gap-1.5 md:hidden"
+          className="relative z-50 flex h-8 w-8 flex-col items-center justify-center gap-1.5 lg:hidden"
         >
           <span
             className={`block h-px w-6 bg-white transition-all duration-300 ${
@@ -85,7 +85,7 @@ export default function Header() {
 
       {/* Mobile menu panel */}
       <div
-        className={`fixed inset-0 top-0 z-40 flex flex-col items-center justify-center gap-8 bg-black/95 backdrop-blur-md transition-opacity duration-300 md:hidden ${
+        className={`fixed inset-0 top-0 z-40 flex flex-col items-center justify-center gap-8 bg-black/95 backdrop-blur-md transition-opacity duration-300 lg:hidden ${
           menuOpen
             ? "pointer-events-auto opacity-100"
             : "pointer-events-none opacity-0"
