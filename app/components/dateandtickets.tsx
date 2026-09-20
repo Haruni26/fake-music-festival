@@ -10,7 +10,7 @@ const ticketTiers = [
     description: "Elevated platforms, air-conditioned lounges, private bars",
   },
   {
-    name: "Cabana Pass",
+    name: "VIP+",
     price: "$1,200",
     description:
       "Private cabana for up to 6, dedicated server, front-of-stage access",
@@ -22,7 +22,7 @@ export function DateAndTickets() {
     <section className="relative bg-navy-deep px-6 py-24">
       <div className="mx-auto flex max-w-4xl flex-col items-center gap-10 text-center">
         <h1 className="font-display text-5xl md:text-7xl tracking-wide text-ivory">
-          June 26–27, 2026
+          June 26–27, 2027
         </h1>
 
         <p className="text-sm md:text-base tracking-wide text-beige">
@@ -45,7 +45,7 @@ export function DateAndTickets() {
           ))}
         </div>
 
-        <button className="mt-4 text-xl rounded bg-ivory px-10 py-3 font-semibold text-navy-deep transition-all hover:shadow-[0_0_25px_rgba(70,230,255,0.6)]">
+        <button className="mt-4 text-xl rounded bg-ivory px-10 py-3 font-semibold text-navy-deep transition-all hover:shadow-[0_0_25px_rgba(70,230,255,0.6)] hover:cursor-pointer">
           Get Tickets
         </button>
       </div>

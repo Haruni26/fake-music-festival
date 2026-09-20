@@ -26,10 +26,10 @@ export default function Home() {
         </div>
 
         <div className="absolute bottom-20 z-10 flex items-center gap-3">
-          <button className="rounded bg-beige px-7 py-2.5 font-semibold text-navy-deep transition-all hover:shadow-[0_0_20px_rgba(229,204,179)]">
+          <button className="rounded bg-beige px-7 py-2.5 font-semibold text-navy-deep transition-all hover:shadow-[0_0_20px_rgba(229,204,179)] hover:cursor-pointer">
             Get Tickets
           </button>
-          <button className="rounded border border-neon-blue px-7 py-2.5 font-semibold text-ivory transition-all hover:bg-neon-blue/10 hover:shadow-[0_0_20px_rgba(31,206,255)]">
+          <button className="rounded border border-neon-blue px-7 py-2.5 font-semibold text-ivory transition-all hover:bg-neon-blue/10 hover:shadow-[0_0_20px_rgba(31,206,255)] hover:cursor-pointer">
             Learn More
           </button>
         </div>
