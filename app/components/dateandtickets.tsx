@@ -1,3 +1,8 @@
+// TODO
+//  - Update the appearance of the ticket tiers to have a more "professional" design
+//  - Edit button appearance and hover effect
+//  - Edit font text for the location
+
 const ticketTiers = [
   {
     name: "General Admission",
